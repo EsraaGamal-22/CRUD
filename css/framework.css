@@ -1,0 +1,38 @@
+/*font*/
+.cap {
+  text-transform: capitalize;
+}
+
+.f-upper {
+  text-transform: uppercase;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+/*end font*/
+/*start box*/
+.d-block {
+  display: block;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.w-full {
+  width: 100%;
+}
+
+/*end box*/
+/*start padding ,margin*/
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+/*end padding ,margin*//*# sourceMappingURL=framework.css.map */

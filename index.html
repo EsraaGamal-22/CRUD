@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUDS</title>
+    <link rel="stylesheet" type="text/css" href="css/framework.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+  </head>
+  <body>
+    <h1 class="txt-center">CRUDS</h1>
+    <h2 class="cap txt-center">project management system</h2>
+    <div class="container">
+      <div class="create-container mb-10">
+        <input
+          class="w-full d-block mb-10"
+          id="title"
+          type="text"
+          placeholder="title"
+          required
+        />
+        <div class="mb-10">
+          <input
+            class="is-invalid"
+            type="number"
+            id="price"
+            name="price"
+            placeholder="price"
+            onkeyup="clacTotal(this)"
+            required
+          />
+          <input
+            class="is-invalid"
+            type="number"
+            id="taxes"
+            name="taxes"
+            placeholder="taxes"
+            onkeyup="clacTotal(this)"
+            required
+          />
+          <input
+            class="is-invalid"
+            type="number"
+            id="ads"
+            name="ads"
+            placeholder="ads"
+            onkeyup="clacTotal(this)"
+            required
+          />
+          <input
+            class="is-invalid"
+            type="number"
+            id="discount"
+            name="discount"
+            placeholder="discount"
+            onkeyup="clacTotal(this)"
+          />
+          <span class="total" id="total">Total:</span>
+        </div>
+        <input
+          class="w-full d-block mb-10"
+          id="count"
+          type="number"
+          placeholder="count"
+        />
+        <input
+          class="w-full d-block mb-10"
+          placeholder="category"
+          id="category"
+        />
+        <button class="btn w-full" id="btn-create">Create</button>
+      </div>
+      <div class="search-container mb-10">
+        <input
+          class="d-block w-full mb-10"
+          placeholder="search"
+          id="btn-search"
+          onkeyup="searchData(this.value)"
+        />
+        <div class="d-flex space-between w-full">
+          <button class="search-btn btn" onclick="getSearchMood(this.id)" id="search-title">
+            Search By Title
+          </button>
+          <button class="search-btn btn" onclick="getSearchMood(this.id)" id="search-category">
+            Search By Category
+          </button>
+        </div>
+      </div>
+      <button class="hide btn w-full mb-10" id="delete-all" onclick="deleteAllItems()"></button>
+      <table style="width: 100%" class="b-table">
+        <tr>
+          <th class="f-upper">id</th>
+          <th class="f-upper">title</th>
+          <th class="f-upper">price</th>
+          <th class="f-upper">taxes</th>
+          <th class="f-upper">ads</th>
+          <th class="f-upper">discount</th>
+          <th class="f-upper">total</th>
+          <th class="f-upper">category</th>
+          <th class="f-upper">update</th>
+          <th class="f-upper">delete</th>
+        </tr>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
