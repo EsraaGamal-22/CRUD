@@ -56,6 +56,13 @@ input {
 
 .b-table {
   text-align: center;
+  width: 100%;
+  border-collapse: collapse;
+
+  @media (max-width: 780px) {
+    overflow-y: scroll;
+    display: block;
+  }
   th,
   td {
     padding: 5px 0;
@@ -65,4 +72,5 @@ input {
 }
 .btn-table{
   padding:5px 15px;
+  
 }

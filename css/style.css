@@ -56,6 +56,14 @@ input:focus {
 
 .b-table {
   text-align: center;
+  width: 100%;
+  border-collapse: collapse;
+}
+@media (max-width: 780px) {
+  .b-table {
+    overflow-y: scroll;
+    display: block;
+  }
 }
 .b-table th,
 .b-table td {
