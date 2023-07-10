@@ -63,6 +63,8 @@ btn_create.onclick = function () {
       dataPro.push(newPro);
       console.log("after add obj after click: "+ dataPro.length);
     }
+    document.getElementById("delete").disabled="false";
+
   }
   // in mood update
   else {
@@ -195,6 +197,10 @@ function updateItem(item) {
     top: 0,
     behavior: "smooth",
   });
+  console.log(document.getElementById("delete"));
+  document.getElementById("delete").disabled="true";
+  document.getElementById("delete").style.cursor="not-allowed";
+
 }
 
 //-- search operation
