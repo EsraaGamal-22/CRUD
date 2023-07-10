@@ -63,7 +63,8 @@ btn_create.onclick = function () {
       dataPro.push(newPro);
       console.log("after add obj after click: "+ dataPro.length);
     }
-    document.getElementById("delete").disabled="false";
+    //document.getElementById("delete").disabled="false";
+    document.getElementsByClassName('btn-delete').disabled=false;
 
   }
   // in mood update
@@ -147,8 +148,8 @@ function readData() {
     <td>${dataPro[i].discount}</td>
     <td>${dataPro[i].total}</td>
     <td>${dataPro[i].category}</td>
-    <td><button class="btn btn-table" id="update" onclick="updateItem(${i})">update</button></td>
-    <td><button class="btn btn-table" id="delete"onclick="deleteItem(${i})">delete</button></td>
+    <td><button class="btn btn-table btn-update" id="update" onclick="updateItem(${i})">update</button></td>
+    <td><button class="btn btn-table btn-delete" id="delete"onclick="deleteItem(${i})">delete</button></td>
   </tr>
     `;
   }
@@ -198,8 +199,11 @@ function updateItem(item) {
     behavior: "smooth",
   });
   console.log(document.getElementById("delete"));
-  document.getElementById("delete").disabled="true";
-  document.getElementById("delete").style.cursor="not-allowed";
+  document.getElementsByClassName('btn-delete')[item].disabled=true;
+  document.getElementsByClassName('btn-delete')[item].style.cursor="not-allowed";
+
+ /* document.getElementById("delete").disabled="true";
+  document.getElementById("delete").style.cursor="not-allowed";*/
 
 }
 
